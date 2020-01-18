@@ -18,6 +18,8 @@ function ready() {
 			// console.log($new_cell.css)
 			$new_cell.css('top', i * Cell_size);
 			$new_cell.css('left', j * Cell_size);
+			$new_cell.css('width', Cell_size);
+			$new_cell.css('height', Cell_size);
 			$new_cell.attr('y', i);
 			$new_cell.attr('x', j);
 			$body.append($new_cell);

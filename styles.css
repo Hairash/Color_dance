@@ -3,8 +3,8 @@
 }
 
 .cell {
-	width: var(--cell-size);
-	height: var(--cell-size);
+	/*width: var(--cell-size);
+	height: var(--cell-size);*/
 	position: absolute;
 	transition: background-color 1s;
 	background-color: black;
