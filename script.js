@@ -2,6 +2,7 @@
 
 N = 40
 Cell_size = 50;
+Delay = 5000;
 $cells = [];
 
 window.onload = ready;
@@ -50,6 +51,10 @@ function change_color_random() {
 	b = Math.random() * 255;
 	random_color = `rgb(${r}, ${g}, ${b})`;
 	$(this).css('background-color', random_color);
+
+	setTimeout(() => {
+		$(this).css('background-color', '');
+	}, Delay);
 }
 
 
