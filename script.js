@@ -1,7 +1,5 @@
-// alert('Hello world!');
-
-N = 40
-Cell_size = 50;
+M = N = 200 
+Cell_size = 25;
 Delay = 5000;
 $cells = [];
 
@@ -10,10 +8,16 @@ window.onload = ready;
 function ready() {
 
 	$body = $('body');
+	Width = parseInt($body.outerWidth(true));
+	Height = parseInt($body.outerHeight(true));
+	console.log(Width, Height);
+	M = Math.ceil(Width / Cell_size);
+	N = Math.ceil(Height / Cell_size);
+	// console.log($body.css('width'), $body.css('height'))
 
 	for(i = 0; i < N; i++) {
 		$line = [];
-		for(j = 0; j < N; j++) {
+		for(j = 0; j < M; j++) {
 			$new_cell = $('<div></div>').addClass('cell');
 			// console.log($new_cell.css)
 			$new_cell.css('top', i * Cell_size);
